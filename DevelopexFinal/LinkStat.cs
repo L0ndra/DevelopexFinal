@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevelopexFinal
 {
-    public class LinkStat
+    public class LinkStat //Структура для збереження посилання і його стану
     {
         public string Link { get; set; }
         public string Status { get; set; }
