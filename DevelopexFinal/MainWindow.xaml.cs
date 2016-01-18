@@ -82,5 +82,13 @@ namespace DevelopexFinal
             textBlock4.Text = "Paused";
             textSearch.Pause();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!button.IsEnabled)
+            {
+                textSearch.Stop();
+            }
+        }
     }
 }

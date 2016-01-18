@@ -100,7 +100,7 @@ namespace DevelopexFinal
         }
        public void Start(MainWindow win,string url, int thrNum, string searchText, int urlNum )//Метод запуску потоків, або оновлення їх роботи
         {
-            
+            window = win;
             if (status == 0)//Стоврення потоків обробки, а також ініціалізація змінних
             {
                 threadsNum = thrNum;
@@ -111,7 +111,7 @@ namespace DevelopexFinal
                 links.Add(link);
                 total = 1;
                 curentEl = 0;
-                window = win;
+                linkComplete = 0;
                 mainThread = new Thread(ControlThread);
                 mainThread.Start();
                 threads = new Thread[threadsNum];
